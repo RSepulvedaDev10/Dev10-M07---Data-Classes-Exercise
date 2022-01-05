@@ -21,10 +21,22 @@ class Orders:
     LastEditedWhen: datetime.datetime
     
     def __gt__(self, other):
-        pass
+        if self.OrderDate > other.OrderDate:
+            print(True)
+        else:
+            print(False)
     
     def __ge__(self, other):
-        pass
+        if self.OrderDate >= other.OrderDate:
+            print(True)
+        else:
+            print(False)
+    
+    def __eq__(self, other):
+        if self.CustomerID == other.CustomerID:
+            print(True)
+        else:
+            print(False)
 
 @dataclass
 class Invoices:
@@ -56,10 +68,22 @@ class Invoices:
     LastEditedWhen: datetime.datetime 
     
     def __gt__(self, other):
-        pass
+        if self.TotalDryItems > other.TotalDryItems:
+            print(True)
+        else:
+            print(False)
     
     def __ge__(self, other):
-        pass
+        if self.TotalDryItems >= other.TotalDryItems:
+            print(True)
+        else:
+            print(False)
+    
+    def __eq__(self, other):
+        if self.ContactPersonID == other.ContactPersonID:
+            print(True)
+        else:
+            print(False)
 
 @dataclass
 class Customers:
